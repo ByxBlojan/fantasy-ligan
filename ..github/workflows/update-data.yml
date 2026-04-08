@@ -1,0 +1,30 @@
+name: Uppdatera omgångsdata
+
+  on:
+    schedule:
+      - cron: '0 21 * * *'
+    workflow_dispatch:
+
+  jobs:
+    update:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checka ut repo
+          uses: actions/checkout@v4
+
+        - name: Sätt upp Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20'
+
+        - name: Hämta ny omgångsdata
+          run: node scripts/update-data.js
+
+        - name: Committa och pusha om något ändrats
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add src/data/omgangar.json
+            git diff --staged --quiet || git commit -m "Auto: uppdatera omgångsdata"
+            git push
