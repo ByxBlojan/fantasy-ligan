@@ -1,19 +1,15 @@
-[
-  {
-    "omgang": 1,
-    "poang": {
-      "Oliver": 102,
-      "Alle": 80,
-      "Josef": 76,
-      "Magnus": 74,
-      "Erik": 88,
-      "Hellman": 70,
-      "Manne": 65,
-      "Lindmark": 52
+  [
+    {
+      "omgang": 1,
+      "poang": {
+        "Oliver": 102,
+        "Alle": 80,
+        "Josef": 76,
+        "Magnus": 74,
+        "Erik": 88,
+        "Hellman": 70,
+        "Manne": 65,
+        "Lindmark": 52
+      }
     }
-  },
-  {
-    "omgang": 2,
-    "poang": {}
-  }
-]
+  ]
