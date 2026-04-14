@@ -31,7 +31,6 @@
     console.log('Hämtar bootstrap-data...')
     const bootstrap = await fetchJSON(`${BASE}/bootstrap-static/`)
 
-    // Hitta senaste avslutade omgång
     const avslutade = bootstrap.events.filter((e) => e.finished)
     if (avslutade.length === 0) {
       console.log('Inga avslutade omgångar ännu.')
@@ -40,12 +39,10 @@
     const sistaGW = avslutade.at(-1).id
     console.log(`Senaste avslutade omgång: GW${sistaGW}`)
 
-    // Läs befintliga omgångar
     const jsonPath = join(__dirname, '../src/data/omgangar.json')
     const omgangar = JSON.parse(readFileSync(jsonPath, 'utf8'))
     const befintligaGW = new Set(omgangar.map((o) => o.omgang))
 
-    // Hitta GW:ar som saknas
     const saknasGW = []
     for (let gw = 1; gw <= sistaGW; gw++) {
       if (!befintligaGW.has(gw)) saknasGW.push(gw)
@@ -65,16 +62,15 @@
 
       for (const spelare of SPELARE) {
         const picksData = await fetchJSON(`${BASE}/entry/${spelare.id}/event/${gw}/picks/`)
-        const totalPoang = picksData.entry_history.total_points
-        poang[spelare.namn] = totalPoang
-        console.log(`    ${spelare.namn}: ${totalPoang} poäng`)
+        const gwPoang = picksData.entry_history.points
+        poang[spelare.namn] = gwPoang
+        console.log(`    ${spelare.namn}: ${gwPoang} poäng`)
       }
 
       omgangar.push({ omgang: gw, poang })
       console.log(`  GW${gw} tillagd: ${JSON.stringify(poang)}`)
     }
 
-    // Sortera och skriv tillbaka
     omgangar.sort((a, b) => a.omgang - b.omgang)
     writeFileSync(jsonPath, JSON.stringify(omgangar, null, 2) + '\n')
     console.log('omgangar.json uppdaterad!')
