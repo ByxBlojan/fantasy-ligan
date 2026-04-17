@@ -1,0 +1,66 @@
+{
+  "asoro": [
+    {
+      "omgang": 1,
+      "poang": 1,
+      "minuter": 14,
+      "mal": 0,
+      "assist": 0
+    },
+    {
+      "omgang": 2,
+      "poang": 1,
+      "minuter": 21,
+      "mal": 0,
+      "assist": 0
+    }
+  ],
+  "besara": [
+    {
+      "omgang": 1,
+      "poang": 10,
+      "minuter": 89,
+      "mal": 0,
+      "assist": 2
+    },
+    {
+      "omgang": 2,
+      "poang": 2,
+      "minuter": 90,
+      "mal": 0,
+      "assist": 0
+    }
+  ],
+  "abraham": [
+    {
+      "omgang": 1,
+      "poang": 18,
+      "minuter": 89,
+      "mal": 3,
+      "assist": 0
+    },
+    {
+      "omgang": 2,
+      "poang": 1,
+      "minuter": 27,
+      "mal": 0,
+      "assist": 0
+    }
+  ],
+  "lien": [
+    {
+      "omgang": 1,
+      "poang": 2,
+      "minuter": 83,
+      "mal": 0,
+      "assist": 0
+    },
+    {
+      "omgang": 2,
+      "poang": 11,
+      "minuter": 90,
+      "mal": 2,
+      "assist": 0
+    }
+  ]
+}
