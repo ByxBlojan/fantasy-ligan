@@ -1,0 +1,49 @@
+name: Uppdatera fantasy-data
+
+on:
+  schedule:
+    - cron: '0 19 * * 5,6,0,1'  # Fre/Lör/Sön/Mån kl 21:00 svensk tid (CEST = UTC+2)
+  workflow_dispatch:             # Möjlighet att köra manuellt från GitHub
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Installera beroenden
+        run: npm ci
+
+      - name: Hämta ny data från API
+        run: node scripts/update-data.js
+
+      - name: Kolla om det finns ändringar
+        id: diff
+        run: |
+          git diff --quiet src/data/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit uppdaterad data till main
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/omgangar.json src/data/spelare.json
+          git commit -m "chore: uppdatera omgångsdata"
+          git push
+
+      - name: Bygg och deploya till GitHub Pages
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+          npx vite build
+          npx gh-pages -d dist -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
