@@ -8,6 +8,7 @@ import Ranking from './components/Ranking'
 import FunStats from './components/FunStats'
 import SideBet from './components/SideBet'
 import { omgangar } from './data/liga'
+import meta from './data/meta.json'
 
 export default function App() {
   return (
@@ -30,9 +31,21 @@ export default function App() {
 
 <PoangPerOmgang />
 
-        <p className="text-center text-slate-600 text-xs mt-8">
-          Uppdatera <code className="text-slate-400">src/data/liga.js</code> efter varje omgång
-        </p>
+        <div className="text-center mt-8 space-y-2">
+          {meta.lastUpdated && (
+            <p className="text-slate-500 text-xs">
+              Senast uppdaterad:{' '}
+              {new Date(meta.lastUpdated).toLocaleString('sv-SE', {
+                day: 'numeric', month: 'long', year: 'numeric',
+                hour: '2-digit', minute: '2-digit',
+                timeZone: 'Europe/Stockholm',
+              })}
+            </p>
+          )}
+          <p className="text-slate-600 text-xs">
+            Saknas info? Be <span className="text-slate-400">Lindqvist i Derbyligan</span> att uppdatera hemsidan.
+          </p>
+        </div>
       </div>
     </div>
   )
