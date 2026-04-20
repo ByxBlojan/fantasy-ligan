@@ -7,6 +7,7 @@ import SkillnadGraf from './components/SkillnadGraf'
 import Ranking from './components/Ranking'
 import FunStats from './components/FunStats'
 import SideBet from './components/SideBet'
+import SamstSpelare from './components/SamstSpelare'
 import { omgangar } from './data/liga'
 import meta from './data/meta.json'
 
@@ -17,6 +18,7 @@ export default function App() {
         <Header antalOmgangar={omgangar.length} />
         <TeamBattle />
         <FunStats />
+        <SamstSpelare />
         <SideBet />
 
         <div className="grid md:grid-cols-2 gap-6">

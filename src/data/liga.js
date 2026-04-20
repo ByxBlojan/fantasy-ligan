@@ -151,6 +151,45 @@ export function sideBetStatus() {
     .sort((a, b) => b.ledarPoang - a.ledarPoang)
 }
 
+export function samstSpelarStats() {
+  const alla = [...lag1.spelare, ...lag2.spelare]
+  const ranking = alla
+    .map((namn) => ({ namn, total: totalpoangSpelare(namn) }))
+    .sort((a, b) => a.total - b.total)
+
+  const sämst = ranking[0]
+  const näststämst = ranking[1]
+  const bäst = ranking[ranking.length - 1]
+
+  const snitt = sämst.total / omgangar.length
+  const bakomLedaren = bäst.total - sämst.total
+  const föraNäststämst = näststämst.total - sämst.total
+
+  const värstaOmgång = omgangar.reduce(
+    (min, o) => (o.poang[sämst.namn] < min.poang ? { gw: o.omgang, poang: o.poang[sämst.namn] } : min),
+    { gw: 0, poang: Infinity }
+  )
+
+  const antalGångerSist = omgangar.filter((o) => {
+    const minPoang = Math.min(...alla.map((n) => o.poang[n] ?? 0))
+    return (o.poang[sämst.namn] ?? 0) === minPoang
+  }).length
+
+  const lag = lag1.spelare.includes(sämst.namn) ? lag1 : lag2
+
+  return {
+    namn: sämst.namn,
+    total: sämst.total,
+    snitt: snitt.toFixed(1),
+    bakomLedaren,
+    föraNäststämst,
+    värstaOmgång,
+    antalGångerSist,
+    antalOmgangar: omgangar.length,
+    lag,
+  }
+}
+
 export function funStats() {
   const ranking = spelarRanking()
   const senastOmgang = omgangar[omgangar.length - 1]
