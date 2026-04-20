@@ -20,10 +20,11 @@ jobs:
       - name: Installera beroenden
         run: npm ci
 
-      - name: Bygg och deploya till GitHub Pages
-        run: |
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
-          npx vite build
-          npx gh-pages -d dist -u "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Bygg projektet
+        run: npm run build
+
+      - name: Deploya till GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
