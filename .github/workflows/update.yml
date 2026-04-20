@@ -1,11 +1,11 @@
 name: Uppdatera omgångsdata
 
-  on:
+on:
     schedule:
       - cron: '0 7 * * *'
     workflow_dispatch:
 
-  jobs:
+jobs:
     update:
       runs-on: ubuntu-latest
       permissions:
