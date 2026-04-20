@@ -13,6 +13,13 @@
       "minuter": 21,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 3,
+      "poang": 0,
+      "minuter": 15,
+      "mal": 0,
+      "assist": 0
     }
   ],
   "besara": [
@@ -29,6 +36,13 @@
       "minuter": 90,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 3,
+      "poang": 14,
+      "minuter": 59,
+      "mal": 1,
+      "assist": 2
     }
   ],
   "abraham": [
@@ -45,6 +59,13 @@
       "minuter": 27,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 3,
+      "poang": 7,
+      "minuter": 59,
+      "mal": 1,
+      "assist": 0
     }
   ],
   "lien": [
@@ -60,6 +81,13 @@
       "poang": 11,
       "minuter": 90,
       "mal": 2,
+      "assist": 0
+    },
+    {
+      "omgang": 3,
+      "poang": 2,
+      "minuter": 90,
+      "mal": 0,
       "assist": 0
     }
   ]
