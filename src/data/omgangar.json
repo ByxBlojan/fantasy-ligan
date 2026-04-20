@@ -24,5 +24,18 @@
       "Manne": 65,
       "Lindmark": 51
     }
+  },
+  {
+    "omgang": 3,
+    "poang": {
+      "Oliver": 98,
+      "Alle": 72,
+      "Josef": 78,
+      "Magnus": 102,
+      "Erik": 83,
+      "Hellman": 70,
+      "Manne": 82,
+      "Lindmark": 85
+    }
   }
 ]
