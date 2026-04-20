@@ -1,0 +1,74 @@
+[
+  {
+    "manager": "Oliver",
+    "fria": 1,
+    "cache": {
+      "1": 2,
+      "2": 3,
+      "3": 2
+    }
+  },
+  {
+    "manager": "Alle",
+    "fria": 3,
+    "cache": {
+      "1": 2,
+      "2": 3,
+      "3": 4
+    }
+  },
+  {
+    "manager": "Josef",
+    "fria": 3,
+    "cache": {
+      "1": 2,
+      "2": 3,
+      "3": 4
+    }
+  },
+  {
+    "manager": "Magnus",
+    "fria": 3,
+    "cache": {
+      "1": 2,
+      "2": 3,
+      "3": 4
+    }
+  },
+  {
+    "manager": "Erik",
+    "fria": 2,
+    "cache": {
+      "1": 2,
+      "2": 2,
+      "3": 3
+    }
+  },
+  {
+    "manager": "Hellman",
+    "fria": 2,
+    "cache": {
+      "1": 2,
+      "2": 2,
+      "3": 3
+    }
+  },
+  {
+    "manager": "Manne",
+    "fria": 3,
+    "cache": {
+      "1": 2,
+      "2": 3,
+      "3": 4
+    }
+  },
+  {
+    "manager": "Lindmark",
+    "fria": 2,
+    "cache": {
+      "1": 2,
+      "2": 2,
+      "3": 3
+    }
+  }
+]

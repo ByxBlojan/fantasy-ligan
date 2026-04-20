@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import spelarData from '../data/spelare.json'
 
 const ASORO_FARG  = '#f97316'  // orange — Manne
@@ -24,6 +25,9 @@ export default function PPMBet() {
   const alleGW = Array.from(
     new Set([...asoro.map((h) => h.omgang), ...besara.map((h) => h.omgang)])
   ).sort((x, y) => x - y)
+
+  const [expanderad, setExpanderad] = useState(false)
+  const synligaGW = expanderad ? alleGW : alleGW.slice(-1)
 
   return (
     <div
@@ -134,7 +138,13 @@ export default function PPMBet() {
       {/* Per omgång */}
       {alleGW.length > 0 && (
         <div>
-          <p className="text-slate-500 text-[11px] uppercase tracking-wider mb-2">Per omgång</p>
+          <button
+            onClick={() => setExpanderad((v) => !v)}
+            className="flex items-center gap-2 mb-2 w-full text-left"
+          >
+            <p className="text-slate-500 text-[11px] uppercase tracking-wider">Per omgång</p>
+            <span className="text-slate-600 text-[11px]">{expanderad ? '▲' : '▼'}</span>
+          </button>
           <div className="rounded-xl overflow-hidden border border-white/5">
             <table className="w-full text-xs">
               <thead>
@@ -155,7 +165,7 @@ export default function PPMBet() {
                 </tr>
               </thead>
               <tbody>
-                {alleGW.map((gw, i) => {
+                {synligaGW.map((gw, i) => {
                   const ah = asoro.find((h) => h.omgang === gw)
                   const bh = besara.find((h) => h.omgang === gw)
                   return (

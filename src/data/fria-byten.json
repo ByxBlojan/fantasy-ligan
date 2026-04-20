@@ -1,0 +1,34 @@
+[
+  {
+    "manager": "Oliver",
+    "fria": 1
+  },
+  {
+    "manager": "Alle",
+    "fria": 3
+  },
+  {
+    "manager": "Josef",
+    "fria": 3
+  },
+  {
+    "manager": "Magnus",
+    "fria": 3
+  },
+  {
+    "manager": "Erik",
+    "fria": 2
+  },
+  {
+    "manager": "Hellman",
+    "fria": 2
+  },
+  {
+    "manager": "Manne",
+    "fria": 3
+  },
+  {
+    "manager": "Lindmark",
+    "fria": 2
+  }
+]

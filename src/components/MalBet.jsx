@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import spelarData from '../data/spelare.json'
 
 const ABRAHAM_FARG = '#a855f7'  // lila — Oliver
@@ -28,6 +29,8 @@ export default function MalBet() {
   })
 
   const maxAcc = Math.max(accA, accL, 1)
+  const [expanderad, setExpanderad] = useState(false)
+  const synligaGW = expanderad ? race : race.slice(-1)
 
   return (
     <div
@@ -135,9 +138,15 @@ export default function MalBet() {
       {/* Race-bars per GW */}
       {race.length > 0 && (
         <div>
-          <p className="text-slate-500 text-[11px] uppercase tracking-wider mb-3">Ackumulerade mål</p>
+          <button
+            onClick={() => setExpanderad((v) => !v)}
+            className="flex items-center gap-2 mb-3 w-full text-left"
+          >
+            <p className="text-slate-500 text-[11px] uppercase tracking-wider">Ackumulerade mål</p>
+            <span className="text-slate-600 text-[11px]">{expanderad ? '▲' : '▼'}</span>
+          </button>
           <div className="flex flex-col gap-2">
-            {race.map(({ gw, accA: a, accL: l, malA, malL }) => (
+            {synligaGW.map(({ gw, accA: a, accL: l, malA, malL }) => (
               <div key={gw}>
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-slate-500 text-[11px] w-8 shrink-0">GW{gw}</span>
