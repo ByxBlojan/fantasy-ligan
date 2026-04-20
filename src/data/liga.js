@@ -138,15 +138,17 @@ export function specialBetStatus() {
 }
 
 export function sideBetStatus() {
-  return sidebets.map(({ spelare1, spelare2, belopp }) => {
-    const p1 = totalpoangSpelare(spelare1)
-    const p2 = totalpoangSpelare(spelare2)
-    const ledare = p1 >= p2 ? spelare1 : spelare2
-    const forlorare = p1 >= p2 ? spelare2 : spelare1
-    const skillnad = Math.abs(p1 - p2)
-    const lag1vinner = lag1.spelare.includes(ledare)
-    return { spelare1, spelare2, belopp, ledare, forlorare, skillnad, farg: lag1vinner ? lag1.farg : lag2.farg }
-  })
+  return sidebets
+    .map(({ spelare1, spelare2, belopp }) => {
+      const p1 = totalpoangSpelare(spelare1)
+      const p2 = totalpoangSpelare(spelare2)
+      const ledare = p1 >= p2 ? spelare1 : spelare2
+      const forlorare = p1 >= p2 ? spelare2 : spelare1
+      const skillnad = Math.abs(p1 - p2)
+      const lag1vinner = lag1.spelare.includes(ledare)
+      return { spelare1, spelare2, belopp, ledare, forlorare, skillnad, farg: lag1vinner ? lag1.farg : lag2.farg, ledarPoang: Math.max(p1, p2) }
+    })
+    .sort((a, b) => b.ledarPoang - a.ledarPoang)
 }
 
 export function funStats() {

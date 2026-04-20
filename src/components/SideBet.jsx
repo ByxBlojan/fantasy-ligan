@@ -1,4 +1,6 @@
 import { sideBetStatus, specialBetStatus } from '../data/liga'
+import PPMBet from './PPMBet'
+import MalBet from './MalBet'
 
 export default function SideBet() {
   const bets = sideBetStatus()
@@ -42,7 +44,12 @@ export default function SideBet() {
           </div>
         ))}
 
-        {special.map((bet) => (
+        {special.map((bet) =>
+          bet.typ === 'ppm' ? (
+            <PPMBet key={`${bet.better1.namn}-${bet.better2.namn}`} />
+          ) : bet.typ === 'mal' ? (
+            <MalBet key={`${bet.better1.namn}-${bet.better2.namn}`} />
+          ) : (
           <div
             key={`${bet.better1.namn}-${bet.better2.namn}`}
             className="rounded-xl border p-4"
@@ -81,7 +88,8 @@ export default function SideBet() {
               </div>
             )}
           </div>
-        ))}
+          )
+        )}
       </div>
     </div>
   )
