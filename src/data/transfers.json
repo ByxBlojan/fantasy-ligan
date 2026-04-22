@@ -43,5 +43,59 @@
     "inCost": 5,
     "out": "Blazevic",
     "outCost": 4.5
+  },
+  {
+    "manager": "Alle",
+    "gw": 4,
+    "time": "2026-04-22T16:28:00.351710Z",
+    "in": "Bergström",
+    "inCost": 6.5,
+    "out": "Botheim",
+    "outCost": 9.9
+  },
+  {
+    "manager": "Alle",
+    "gw": 4,
+    "time": "2026-04-22T16:28:00.351208Z",
+    "in": "Magnusson",
+    "inCost": 5.1,
+    "out": "Netabay",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Alle",
+    "gw": 4,
+    "time": "2026-04-22T16:28:00.347410Z",
+    "in": "Persson",
+    "inCost": 7.4,
+    "out": "Wembangomo",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Erik",
+    "gw": 4,
+    "time": "2026-04-22T16:35:12.972476Z",
+    "in": "Winther",
+    "inCost": 6.1,
+    "out": "Pettersson",
+    "outCost": 5.9
+  },
+  {
+    "manager": "Lindmark",
+    "gw": 4,
+    "time": "2026-04-22T14:10:49.410228Z",
+    "in": "Winther",
+    "inCost": 6.1,
+    "out": "Jansson",
+    "outCost": 6.4
+  },
+  {
+    "manager": "Manne",
+    "gw": 4,
+    "time": "2026-04-22T16:19:59.307693Z",
+    "in": "Winther",
+    "inCost": 6.1,
+    "out": "Jansson",
+    "outCost": 6.4
   }
 ]
