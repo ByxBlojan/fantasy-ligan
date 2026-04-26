@@ -97,5 +97,95 @@
     "inCost": 6.1,
     "out": "Jansson",
     "outCost": 6.4
+  },
+  {
+    "manager": "Alle",
+    "gw": 5,
+    "time": "2026-04-25T15:53:27.877858Z",
+    "in": "Pettersson",
+    "inCost": 5.1,
+    "out": "Nordfeldt",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Hellman",
+    "gw": 5,
+    "time": "2026-04-25T08:07:06.405012Z",
+    "in": "Ladefoged",
+    "inCost": 6.3,
+    "out": "Boudah",
+    "outCost": 5.9
+  },
+  {
+    "manager": "Hellman",
+    "gw": 5,
+    "time": "2026-04-25T08:07:06.404540Z",
+    "in": "Bjerkebo",
+    "inCost": 8.9,
+    "out": "Olsson",
+    "outCost": 7
+  },
+  {
+    "manager": "Hellman",
+    "gw": 5,
+    "time": "2026-04-25T08:07:06.400737Z",
+    "in": "Iqbal",
+    "inCost": 6,
+    "out": "Fofana",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Josef",
+    "gw": 5,
+    "time": "2026-04-25T06:10:06.833592Z",
+    "in": "Bjerkebo",
+    "inCost": 8.9,
+    "out": "Thórdarson",
+    "outCost": 5.4
+  },
+  {
+    "manager": "Josef",
+    "gw": 5,
+    "time": "2026-04-25T06:10:06.832880Z",
+    "in": "Styffe",
+    "inCost": 4.5,
+    "out": "Skoglund",
+    "outCost": 6.5
+  },
+  {
+    "manager": "Josef",
+    "gw": 5,
+    "time": "2026-04-25T06:10:06.828232Z",
+    "in": "Kindberg",
+    "inCost": 4.5,
+    "out": "Nordfeldt",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Lindmark",
+    "gw": 5,
+    "time": "2026-04-26T09:14:45.444864Z",
+    "in": "Lien",
+    "inCost": 9.1,
+    "out": "Fenger",
+    "outCost": 8.3
+  },
+  {
+    "manager": "Lindmark",
+    "gw": 5,
+    "time": "2026-04-26T09:14:45.440940Z",
+    "in": "Rosengren",
+    "inCost": 7.5,
+    "out": "Heintz",
+    "outCost": 9.9
+  },
+  {
+    "manager": "Oliver",
+    "gw": 5,
+    "time": "2026-04-24T13:26:01.970981Z",
+    "in": "Magnusson",
+    "inCost": 5.2,
+    "out": "Yohanna",
+    "outCost": 6.6
   }
 ]
