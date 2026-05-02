@@ -187,5 +187,41 @@
     "inCost": 5.2,
     "out": "Yohanna",
     "outCost": 6.6
+  },
+  {
+    "manager": "Alle",
+    "gw": 6,
+    "time": "2026-05-02T12:52:29.352405Z",
+    "in": "Wängberg",
+    "inCost": 5.4,
+    "out": "H. Magnusson",
+    "outCost": 4
+  },
+  {
+    "manager": "Erik",
+    "gw": 6,
+    "time": "2026-05-02T09:42:12.719388Z",
+    "in": "Isherwood",
+    "inCost": 5.5,
+    "out": "Cissé",
+    "outCost": 5.6
+  },
+  {
+    "manager": "Magnus",
+    "gw": 6,
+    "time": "2026-05-02T10:40:26.987238Z",
+    "in": "Magnusson",
+    "inCost": 5.3,
+    "out": "Yohanna",
+    "outCost": 6.6
+  },
+  {
+    "manager": "Manne",
+    "gw": 6,
+    "time": "2026-05-02T12:52:49.898514Z",
+    "in": "Asoro",
+    "inCost": 7.4,
+    "out": "Yohanna",
+    "outCost": 6.6
   }
 ]
