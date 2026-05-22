@@ -48,6 +48,13 @@
       "minuter": 1,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 8,
+      "poang": 1,
+      "minuter": 16,
+      "mal": 0,
+      "assist": 0
     }
   ],
   "besara": [
@@ -97,6 +104,20 @@
       "omgang": 7,
       "poang": 4,
       "minuter": 73,
+      "mal": 0,
+      "assist": 0
+    },
+    {
+      "omgang": 8,
+      "poang": 23,
+      "minuter": 90,
+      "mal": 3,
+      "assist": 1
+    },
+    {
+      "omgang": 8,
+      "poang": 1,
+      "minuter": 27,
       "mal": 0,
       "assist": 0
     }
@@ -150,6 +171,20 @@
       "minuter": 60,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 8,
+      "poang": 9,
+      "minuter": 61,
+      "mal": 0,
+      "assist": 2
+    },
+    {
+      "omgang": 8,
+      "poang": 2,
+      "minuter": 83,
+      "mal": 0,
+      "assist": 0
     }
   ],
   "lien": [
@@ -201,6 +236,13 @@
       "minuter": 90,
       "mal": 0,
       "assist": 1
+    },
+    {
+      "omgang": 8,
+      "poang": 2,
+      "minuter": 90,
+      "mal": 0,
+      "assist": 0
     }
   ]
 }
