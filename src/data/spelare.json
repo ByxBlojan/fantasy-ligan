@@ -134,6 +134,13 @@
       "minuter": 90,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 10,
+      "poang": 3,
+      "minuter": 89,
+      "mal": 0,
+      "assist": 0
     }
   ],
   "abraham": [
@@ -206,6 +213,13 @@
       "minuter": 90,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 10,
+      "poang": 7,
+      "minuter": 90,
+      "mal": 0,
+      "assist": 1
     }
   ],
   "lien": [
