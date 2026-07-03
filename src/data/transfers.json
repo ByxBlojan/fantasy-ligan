@@ -664,5 +664,41 @@
     "inCost": 5.1,
     "out": "Fagerjord",
     "outCost": 5.1
+  },
+  {
+    "manager": "Josef",
+    "gw": 11,
+    "time": "2026-07-03T08:22:28.956805Z",
+    "in": "Åslund",
+    "inCost": 6.6,
+    "out": "Yohanna",
+    "outCost": 6.4
+  },
+  {
+    "manager": "Josef",
+    "gw": 11,
+    "time": "2026-07-03T08:22:28.953699Z",
+    "in": "Rinne",
+    "inCost": 5.6,
+    "out": "Wallinder",
+    "outCost": 6.1
+  },
+  {
+    "manager": "Magnus",
+    "gw": 11,
+    "time": "2026-07-03T16:15:37.385394Z",
+    "in": "Ure",
+    "inCost": 8.7,
+    "out": "Salter",
+    "outCost": 7.4
+  },
+  {
+    "manager": "Oliver",
+    "gw": 11,
+    "time": "2026-06-28T10:10:05.658433Z",
+    "in": "Doumbia",
+    "inCost": 5.5,
+    "out": "Milovanovic",
+    "outCost": 5.1
   }
 ]
