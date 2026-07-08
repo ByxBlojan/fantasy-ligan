@@ -2,6 +2,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts'
 import { lag1, lag2, poangPerOmgangLag } from '../data/liga'
+import Card, { SectionHeader } from './Card'
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null
@@ -9,8 +10,8 @@ const CustomTooltip = ({ active, payload, label }) => {
   const diff = (l1?.value ?? 0) - (l2?.value ?? 0)
   return (
     <div
-      className="rounded-xl p-3 text-sm shadow-xl"
-      style={{ backgroundColor: '#1a2a1e', border: '1px solid #1e3a28' }}
+      className="rounded-xl p-3 text-sm shadow-2xl border backdrop-blur-xl"
+      style={{ backgroundColor: 'rgba(15, 23, 25, 0.85)', borderColor: 'rgba(255,255,255,0.1)' }}
     >
       <p className="font-bold text-white mb-2">{label}</p>
       {payload.map((p) => (
@@ -19,7 +20,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           <span className="font-bold text-white tabular-nums">{p.value}p</span>
         </div>
       ))}
-      <div className="border-t border-slate-700 mt-2 pt-2 text-xs text-slate-400">
+      <div className="border-t border-white/10 mt-2 pt-2 text-xs text-slate-400">
         Differens: {diff > 0 ? '+' : ''}{diff}p
       </div>
     </div>
@@ -37,23 +38,29 @@ export default function LagJamforelse() {
   }))
 
   return (
-    <div
-      className="rounded-2xl border p-6 mb-6"
-      style={{ backgroundColor: '#121a16', borderColor: '#1e3a28' }}
-    >
-      <h2 className="text-lg font-bold text-white mb-1">Lag vs lag per omgång</h2>
-      <p className="text-slate-400 text-sm mb-6">Totalt lagpoäng per omgång</p>
-      <ResponsiveContainer width="100%" height={280}>
-        <BarChart data={data} barGap={4}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e3a28" />
-          <XAxis dataKey="name" stroke="#475569" tick={{ fill: '#94a3b8', fontSize: 12 }} />
-          <YAxis stroke="#475569" tick={{ fill: '#94a3b8', fontSize: 12 }} />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend wrapperStyle={{ color: '#94a3b8', fontSize: 13 }} />
-          <Bar dataKey={lag1.namn} fill={lag1.farg} radius={[4, 4, 0, 0]} />
-          <Bar dataKey={lag2.namn} fill={lag2.farg} radius={[4, 4, 0, 0]} />
+    <Card>
+      <SectionHeader title="Lag vs lag per omgång" sub="Totalt lagpoäng per omgång" />
+      <ResponsiveContainer width="100%" height={260}>
+        <BarChart data={data} barGap={4} margin={{ top: 10, right: 5, left: -20, bottom: 0 }}>
+          <defs>
+            <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor={lag1.farg} stopOpacity={1} />
+              <stop offset="100%" stopColor={lag1.farg} stopOpacity={0.6} />
+            </linearGradient>
+            <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor={lag2.farg} stopOpacity={1} />
+              <stop offset="100%" stopColor={lag2.farg} stopOpacity={0.6} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
+          <XAxis dataKey="name" stroke="rgba(255,255,255,0.2)" tick={{ fill: '#94a3b8', fontSize: 11 }} />
+          <YAxis stroke="rgba(255,255,255,0.2)" tick={{ fill: '#94a3b8', fontSize: 11 }} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(255,255,255,0.03)' }} />
+          <Legend wrapperStyle={{ color: '#94a3b8', fontSize: 12 }} />
+          <Bar dataKey={lag1.namn} fill="url(#bar1)" radius={[6, 6, 0, 0]} />
+          <Bar dataKey={lag2.namn} fill="url(#bar2)" radius={[6, 6, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </Card>
   )
 }

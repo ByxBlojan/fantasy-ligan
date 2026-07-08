@@ -1,17 +1,52 @@
 import { funStats, lag1, lag2, poangPerOmgangLag, omgangar } from '../data/liga'
+import Card, { SectionHeader } from './Card'
 
-function StatKort({ emoji, titel, varde, sub, farg }) {
+function HeroKort({ emoji, titel, spelare, poang, omgang, farg }) {
   return (
     <div
-      className="rounded-xl p-4 flex flex-col gap-1"
-      style={{ backgroundColor: '#0f1e13', border: `1px solid ${farg || '#1e3a28'}30` }}
+      className="relative overflow-hidden rounded-2xl p-4 sm:p-5 border backdrop-blur-sm"
+      style={{
+        backgroundColor: farg + '08',
+        borderColor: farg + '30',
+      }}
     >
-      <div className="text-2xl">{emoji}</div>
-      <div className="text-xs text-slate-400 font-medium uppercase tracking-wide">{titel}</div>
-      <div className="text-white font-bold text-lg leading-tight" style={{ color: farg }}>
-        {varde}
+      <div
+        className="absolute -top-8 -right-8 w-24 h-24 rounded-full blur-3xl opacity-40"
+        style={{ backgroundColor: farg }}
+      />
+      <div className="relative">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-xl sm:text-2xl">{emoji}</span>
+          <span className="text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider">{titel}</span>
+        </div>
+        <div
+          className="text-2xl sm:text-3xl font-black tracking-tight leading-none mb-1"
+          style={{ color: farg, textShadow: `0 0 24px ${farg}44` }}
+        >
+          {poang}p
+        </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-white font-bold text-sm sm:text-base">{spelare}</span>
+          <span className="text-slate-500 text-[10px] sm:text-xs tabular-nums">omg {omgang}</span>
+        </div>
       </div>
-      {sub && <div className="text-slate-500 text-xs">{sub}</div>}
+    </div>
+  )
+}
+
+function MiniRad({ emoji, label, varde, sub, farg }) {
+  return (
+    <div className="flex items-center gap-2.5 px-3 py-2 rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm">
+      <span className="text-base sm:text-lg shrink-0">{emoji}</span>
+      <div className="min-w-0 flex-1">
+        <div className="text-[10px] text-slate-500 uppercase tracking-wider leading-none mb-0.5">{label}</div>
+        <div className="font-bold text-xs sm:text-sm truncate" style={{ color: farg }}>
+          {varde}
+        </div>
+      </div>
+      {sub && (
+        <span className="text-[10px] sm:text-xs text-slate-500 tabular-nums shrink-0">{sub}</span>
+      )}
     </div>
   )
 }
@@ -22,84 +57,105 @@ export default function FunStats() {
   const lag1PerOmgang = poangPerOmgangLag(lag1)
   const lag2PerOmgang = poangPerOmgangLag(lag2)
 
-  // Räkna omgångssegrar
   let lag1Segrar = 0
   let lag2Segrar = 0
+  let oavgjort = 0
   lag1PerOmgang.forEach((o, i) => {
     if (o.poang > lag2PerOmgang[i].poang) lag1Segrar++
     else if (o.poang < lag2PerOmgang[i].poang) lag2Segrar++
+    else oavgjort++
   })
 
-  // Snittpoäng per omgång för lagen
-  const snitt1 = Math.round(lag1PerOmgang.reduce((s, o) => s + o.poang, 0) / lag1PerOmgang.length)
-  const snitt2 = Math.round(lag2PerOmgang.reduce((s, o) => s + o.poang, 0) / lag2PerOmgang.length)
+  const totalMatcher = lag1Segrar + lag2Segrar + oavgjort
+  const lag1Andel = totalMatcher > 0 ? (lag1Segrar / totalMatcher) * 100 : 50
 
   return (
-    <div
-      className="rounded-2xl border p-6 mb-6"
-      style={{ backgroundColor: '#121a16', borderColor: '#1e3a28' }}
-    >
-      <h2 className="text-lg font-bold text-white mb-1">Fun stats</h2>
-      <p className="text-slate-400 text-sm mb-6">Highlights från säsongen</p>
+    <Card>
+      <SectionHeader title="Fun stats" sub="Highlights från säsongen" />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <StatKort
-          emoji="👑"
-          titel="Ligaledare"
-          varde={stats.ledare.namn}
-          sub={`${stats.ledare.total}p totalt`}
-          farg={stats.ledare.farg}
-        />
-        <StatKort
-          emoji="💀"
-          titel="Sista plats"
-          varde={stats.sista.namn}
-          sub={`${stats.sista.total}p totalt`}
-          farg="#ef4444"
-        />
-        <StatKort
+      {/* Hero: bästa/sämsta omgången */}
+      <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3">
+        <HeroKort
           emoji="🔥"
           titel="Bästa omgång"
-          varde={`${stats.bastaOmgang.spelare}`}
-          sub={`${stats.bastaOmgang.poang}p i omg ${stats.bastaOmgang.omgang}`}
+          spelare={stats.bastaOmgang.spelare}
+          poang={stats.bastaOmgang.poang}
+          omgang={stats.bastaOmgang.omgang}
           farg="#fbbf24"
         />
-        <StatKort
+        <HeroKort
           emoji="🥶"
           titel="Sämsta omgång"
-          varde={`${stats.samstaOmgang.spelare}`}
-          sub={`${stats.samstaOmgang.poang}p i omg ${stats.samstaOmgang.omgang}`}
+          spelare={stats.samstaOmgang.spelare}
+          poang={stats.samstaOmgang.poang}
+          omgang={stats.samstaOmgang.omgang}
           farg="#94a3b8"
         />
-        <StatKort
-          emoji="⚔️"
-          titel={`${lag1.namn} omgångssegrar`}
-          varde={`${lag1Segrar} av ${omgangar.length}`}
-          sub={`snitt ${snitt1}p/omg`}
-          farg={lag1.farg}
+      </div>
+
+      {/* Omgångssegrar - VS bar */}
+      <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-3 mb-3">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-[10px] text-slate-500 uppercase tracking-wider">Omgångssegrar</span>
+          <span className="text-[10px] text-slate-500 tabular-nums">{omgangar.length} spelade</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-sm sm:text-base tabular-nums shrink-0" style={{ color: lag1.farg }}>
+            {lag1Segrar}
+          </span>
+          <div className="flex-1 h-2 rounded-full bg-white/[0.04] overflow-hidden flex">
+            <div
+              className="h-full transition-all duration-500"
+              style={{
+                width: `${lag1Andel}%`,
+                background: `linear-gradient(90deg, ${lag1.farg}, ${lag1.farg}cc)`,
+                boxShadow: `0 0 8px ${lag1.farg}66`,
+              }}
+            />
+            <div
+              className="h-full transition-all duration-500"
+              style={{
+                width: `${100 - lag1Andel}%`,
+                background: `linear-gradient(90deg, ${lag2.farg}cc, ${lag2.farg})`,
+                boxShadow: `0 0 8px ${lag2.farg}66`,
+              }}
+            />
+          </div>
+          <span className="font-bold text-sm sm:text-base tabular-nums shrink-0" style={{ color: lag2.farg }}>
+            {lag2Segrar}
+          </span>
+        </div>
+        <div className="flex justify-between mt-1">
+          <span className="text-[10px] text-slate-500">{lag1.namn}</span>
+          {oavgjort > 0 && <span className="text-[10px] text-slate-600">{oavgjort} oavgj.</span>}
+          <span className="text-[10px] text-slate-500">{lag2.namn}</span>
+        </div>
+      </div>
+
+      {/* Kompakta rader */}
+      <div className="space-y-1.5">
+        <MiniRad
+          emoji="👑"
+          label="Ligaledare"
+          varde={stats.ledare.namn}
+          sub={`${stats.ledare.total}p`}
+          farg={stats.ledare.farg}
         />
-        <StatKort
-          emoji="⚔️"
-          titel={`${lag2.namn} omgångssegrar`}
-          varde={`${lag2Segrar} av ${omgangar.length}`}
-          sub={`snitt ${snitt2}p/omg`}
-          farg={lag2.farg}
+        <MiniRad
+          emoji="💀"
+          label="Sista plats"
+          varde={stats.sista.namn}
+          sub={`${stats.sista.total}p`}
+          farg="#ef4444"
         />
-        <StatKort
+        <MiniRad
           emoji="🏆"
-          titel="Senast vann omgången"
+          label="Senast vann omgången"
           varde={stats.senastVinnare.namn}
-          sub={`Omgång ${omgangar.length}`}
+          sub={`omg ${omgangar.length}`}
           farg={stats.senastVinnare.farg}
         />
-        <StatKort
-          emoji="📊"
-          titel="Omgångar spelade"
-          varde={stats.antalOmgangar}
-          sub="av ~30 totalt"
-          farg="#22c55e"
-        />
       </div>
-    </div>
+    </Card>
   )
 }

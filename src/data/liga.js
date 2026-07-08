@@ -99,6 +99,76 @@ export function spelarRanking() {
     .sort((a, b) => b.total - a.total)
 }
 
+// Ranking som den var innan senaste omgången — för att räkna platsdiff
+export function spelarRankingForra() {
+  if (omgangar.length < 2) return null
+  const alla = [...lag1.spelare, ...lag2.spelare]
+  const utomSenaste = omgangar.slice(0, -1)
+  return alla
+    .map((namn) => ({
+      namn,
+      total: utomSenaste.reduce((s, o) => s + (o.poang[namn] ?? 0), 0),
+    }))
+    .sort((a, b) => b.total - a.total)
+    .map((r, i) => ({ namn: r.namn, plats: i + 1 }))
+}
+
+// Formsnitt: senaste N omgångarnas snitt jämfört med säsongssnitt
+export function formData(namn, senasteN = 3) {
+  const total = totalpoangSpelare(namn)
+  const säsongsSnitt = omgangar.length > 0 ? total / omgangar.length : 0
+
+  const senaste = omgangar.slice(-senasteN)
+  const senasteTotal = senaste.reduce((s, o) => s + (o.poang[namn] ?? 0), 0)
+  const senasteSnitt = senaste.length > 0 ? senasteTotal / senaste.length : 0
+
+  const diff = senasteSnitt - säsongsSnitt
+  const diffProcent = säsongsSnitt > 0 ? (diff / säsongsSnitt) * 100 : 0
+
+  return {
+    säsongsSnitt: Math.round(säsongsSnitt * 10) / 10,
+    senasteSnitt: Math.round(senasteSnitt * 10) / 10,
+    diff: Math.round(diff * 10) / 10,
+    diffProcent: Math.round(diffProcent),
+    antalOmgangar: senaste.length,
+  }
+}
+
+// Projicerat sluttabell om säsongen slutade nu
+export function projiceradTabell(totalGw = 30) {
+  const spelade = omgangar.length
+  const kvar = Math.max(totalGw - spelade, 0)
+  const alla = [...lag1.spelare, ...lag2.spelare]
+
+  const projicerat = alla
+    .map((namn) => {
+      const total = totalpoangSpelare(namn)
+      const snitt = spelade > 0 ? total / spelade : 0
+      const projicerat = Math.round(total + snitt * kvar)
+      return {
+        namn,
+        lag: lag1.spelare.includes(namn) ? lag1.namn : lag2.namn,
+        farg: lag1.spelare.includes(namn) ? lag1.farg : lag2.farg,
+        total,
+        snitt: Math.round(snitt * 10) / 10,
+        projicerat,
+        kvar,
+      }
+    })
+    .sort((a, b) => b.projicerat - a.projicerat)
+
+  // Räkna ut vad varje spelare behöver snitta för att komma ikapp ledaren
+  const ledare = projicerat[0]
+  return projicerat.map((s) => {
+    if (s.namn === ledare.namn || kvar === 0) return { ...s, behöverSnitt: null, gap: 0 }
+    const gap = ledare.projicerat - s.projicerat
+    const behöverSnitt = kvar > 0 ? Math.ceil((s.total + gap) / spelade * 10) / 10 : null
+    // Snitt spelaren behöver hålla RESTEN för att komma ikapp:
+    const behöverRestenSnitt = kvar > 0 ? Math.ceil(((ledare.projicerat - s.total) / kvar) * 10) / 10 : null
+    return { ...s, gap, behöverRestenSnitt }
+  })
+}
+
 export function specialBetStatus() {
   return specialbets.map((bet) => {
     if (bet.typ === 'ppm') {

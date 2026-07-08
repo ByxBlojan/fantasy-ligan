@@ -2,9 +2,8 @@ import './index.css'
 import Header from './components/Header'
 import TeamBattle from './components/TeamBattle'
 import PoangPerOmgang from './components/PoangPerOmgang'
-import LagJamforelse from './components/LagJamforelse'
-import SkillnadGraf from './components/SkillnadGraf'
 import Ranking from './components/Ranking'
+import SlutTabell from './components/SlutTabell'
 import FunStats from './components/FunStats'
 import SideBet from './components/SideBet'
 import SamstSpelare from './components/SamstSpelare'
@@ -14,24 +13,22 @@ import meta from './data/meta.json'
 
 export default function App() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#0a0f0d' }}>
-      <div className="max-w-4xl mx-auto px-4 pb-12">
+    <div className="min-h-screen">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 pb-12">
         <Header antalOmgangar={omgangar.length} />
-        <TeamBattle />
-        <FunStats />
-        <SamstSpelare />
-        <SideBet />
-        <Byten />
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <LagJamforelse />
+        <div className="space-y-4 sm:space-y-6">
+          <TeamBattle />
+          <FunStats />
+          <SamstSpelare />
+          <SideBet />
+          <Byten />
           <Ranking />
+          <SlutTabell />
+          <PoangPerOmgang />
         </div>
-        <SkillnadGraf />
 
-<PoangPerOmgang />
-
-        <div className="text-center mt-8 space-y-2">
+        <div className="text-center mt-10 space-y-2">
           {meta.lastUpdated && (
             <p className="text-slate-500 text-xs">
               Senast uppdaterad:{' '}
