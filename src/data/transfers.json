@@ -781,5 +781,32 @@
     "inCost": 6.6,
     "out": "Bergström",
     "outCost": 6.4
+  },
+  {
+    "manager": "Hellman",
+    "gw": 13,
+    "time": "2026-07-17T08:34:12.957183Z",
+    "in": "Rinne",
+    "inCost": 5.6,
+    "out": "Pettersson",
+    "outCost": 5.3
+  },
+  {
+    "manager": "Magnus",
+    "gw": 13,
+    "time": "2026-07-17T15:04:18.660158Z",
+    "in": "Castegren",
+    "inCost": 4.8,
+    "out": "Eriksson",
+    "outCost": 6.5
+  },
+  {
+    "manager": "Manne",
+    "gw": 13,
+    "time": "2026-07-17T16:20:17.826965Z",
+    "in": "Johansson",
+    "inCost": 5.8,
+    "out": "Hult",
+    "outCost": 6
   }
 ]
