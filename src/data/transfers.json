@@ -808,5 +808,212 @@
     "inCost": 5.8,
     "out": "Hult",
     "outCost": 6
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.780618Z",
+    "in": "Abraham",
+    "inCost": 10.2,
+    "out": "Arvidsson",
+    "outCost": 4.3
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.780405Z",
+    "in": "Ladefoged",
+    "inCost": 6.7,
+    "out": "Bergström",
+    "outCost": 6.3
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.780200Z",
+    "in": "Haksabanovic",
+    "inCost": 9.8,
+    "out": "Milovanovic",
+    "outCost": 5.1
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.779994Z",
+    "in": "Ayari",
+    "inCost": 5.4,
+    "out": "Magnusson",
+    "outCost": 5.2
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.779784Z",
+    "in": "Sagoe Jr",
+    "inCost": 6.6,
+    "out": "Besara",
+    "outCost": 13.5
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.779561Z",
+    "in": "Castegren",
+    "inCost": 4.8,
+    "out": "Ågren",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.779331Z",
+    "in": "Jansson",
+    "inCost": 5.1,
+    "out": "Wängberg",
+    "outCost": 5.4
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.779055Z",
+    "in": "H. Magnusson",
+    "inCost": 4.2,
+    "out": "Pettersson",
+    "outCost": 5.7
+  },
+  {
+    "manager": "Alle",
+    "gw": 14,
+    "time": "2026-07-24T14:57:48.778709Z",
+    "in": "Tenho",
+    "inCost": 5.6,
+    "out": "Persson",
+    "outCost": 7.4
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-24T14:03:14.012419Z",
+    "in": "Papagiannopoulos",
+    "inCost": 5.2,
+    "out": "Jansson",
+    "outCost": 5
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-24T14:03:14.012164Z",
+    "in": "Johansson",
+    "inCost": 5.9,
+    "out": "Larsson",
+    "outCost": 6.7
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.301225Z",
+    "in": "Ladefoged",
+    "inCost": 6.7,
+    "out": "Arvidsson",
+    "outCost": 4.4
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.301073Z",
+    "in": "Lien",
+    "inCost": 9.4,
+    "out": "Abraham",
+    "outCost": 10.1
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.300917Z",
+    "in": "Skogmar",
+    "inCost": 5,
+    "out": "Fagerjord",
+    "outCost": 5
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.300768Z",
+    "in": "Sagoe Jr",
+    "inCost": 6.5,
+    "out": "Thórdarson",
+    "outCost": 5.2
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.300616Z",
+    "in": "Lindberg",
+    "inCost": 8.2,
+    "out": "Heintz",
+    "outCost": 9.8
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.300452Z",
+    "in": "Jansson",
+    "inCost": 5,
+    "out": "Isherwood",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.300262Z",
+    "in": "H. Magnusson",
+    "inCost": 4.2,
+    "out": "Hult",
+    "outCost": 5.9
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.300108Z",
+    "in": "Krusnell",
+    "inCost": 6.8,
+    "out": "Eriksson",
+    "outCost": 6.5
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.299930Z",
+    "in": "Cavallius",
+    "inCost": 4.6,
+    "out": "Forsell",
+    "outCost": 4
+  },
+  {
+    "manager": "Erik",
+    "gw": 14,
+    "time": "2026-07-19T10:04:36.299712Z",
+    "in": "Krasniqi",
+    "inCost": 5.4,
+    "out": "Igonen",
+    "outCost": 4.5
+  },
+  {
+    "manager": "Magnus",
+    "gw": 14,
+    "time": "2026-07-24T13:38:05.758201Z",
+    "in": "Hegland",
+    "inCost": 7.9,
+    "out": "Magnusson",
+    "outCost": 5.3
+  },
+  {
+    "manager": "Magnus",
+    "gw": 14,
+    "time": "2026-07-24T13:38:05.751458Z",
+    "in": "Jansson",
+    "inCost": 5.1,
+    "out": "Isherwood",
+    "outCost": 5.5
   }
 ]
