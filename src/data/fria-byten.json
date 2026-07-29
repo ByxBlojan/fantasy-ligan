@@ -1,7 +1,7 @@
 [
   {
     "manager": "Oliver",
-    "fria": 2
+    "fria": 3
   },
   {
     "manager": "Alle",
@@ -9,26 +9,26 @@
   },
   {
     "manager": "Josef",
-    "fria": 3
+    "fria": 4
   },
   {
     "manager": "Magnus",
-    "fria": 2
+    "fria": 1
   },
   {
     "manager": "Erik",
-    "fria": 3
+    "fria": 4
   },
   {
     "manager": "Hellman",
-    "fria": 1
+    "fria": 2
   },
   {
     "manager": "Manne",
-    "fria": 1
+    "fria": 2
   },
   {
     "manager": "Lindmark",
-    "fria": 3
+    "fria": 4
   }
 ]
