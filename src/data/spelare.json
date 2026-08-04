@@ -90,6 +90,13 @@
       "minuter": 24,
       "mal": 0,
       "assist": 0
+    },
+    {
+      "omgang": 15,
+      "poang": 0,
+      "minuter": 0,
+      "mal": 0,
+      "assist": 0
     }
   ],
   "besara": [
@@ -396,6 +403,13 @@
       "poang": 6,
       "minuter": 90,
       "mal": 0,
+      "assist": 1
+    },
+    {
+      "omgang": 15,
+      "poang": 21,
+      "minuter": 90,
+      "mal": 3,
       "assist": 1
     }
   ]
