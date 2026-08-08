@@ -1384,5 +1384,68 @@
     "inCost": 4.6,
     "out": "Forsell",
     "outCost": 4
+  },
+  {
+    "manager": "Alle",
+    "gw": 16,
+    "time": "2026-08-08T10:11:49.042770Z",
+    "in": "Magnusson",
+    "inCost": 5.2,
+    "out": "Ayari",
+    "outCost": 5.4
+  },
+  {
+    "manager": "Alle",
+    "gw": 16,
+    "time": "2026-08-08T10:11:49.038805Z",
+    "in": "Styffe",
+    "inCost": 4.5,
+    "out": "Jansson",
+    "outCost": 5.1
+  },
+  {
+    "manager": "Erik",
+    "gw": 16,
+    "time": "2026-08-03T19:14:00.779771Z",
+    "in": "Tenho",
+    "inCost": 5.7,
+    "out": "Johansson",
+    "outCost": 5.9
+  },
+  {
+    "manager": "Magnus",
+    "gw": 16,
+    "time": "2026-08-08T09:20:49.272806Z",
+    "in": "Lien",
+    "inCost": 9.6,
+    "out": "Ladefoged",
+    "outCost": 6.3
+  },
+  {
+    "manager": "Magnus",
+    "gw": 16,
+    "time": "2026-08-08T09:20:49.272332Z",
+    "in": "Lind",
+    "inCost": 10.4,
+    "out": "Besara",
+    "outCost": 13.4
+  },
+  {
+    "manager": "Magnus",
+    "gw": 16,
+    "time": "2026-08-08T09:20:49.267204Z",
+    "in": "Baggesen",
+    "inCost": 4.9,
+    "out": "Jansson",
+    "outCost": 5.1
+  },
+  {
+    "manager": "Oliver",
+    "gw": 16,
+    "time": "2026-08-04T21:16:47.808028Z",
+    "in": "Abraham",
+    "inCost": 10.2,
+    "out": "Lien",
+    "outCost": 9.5
   }
 ]
