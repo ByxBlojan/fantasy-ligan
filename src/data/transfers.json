@@ -1627,5 +1627,32 @@
     "inCost": 5.8,
     "out": "Papagiannopoulos",
     "outCost": 5.2
+  },
+  {
+    "manager": "Erik",
+    "gw": 18,
+    "time": "2026-08-16T16:17:43.465162Z",
+    "in": "Kamara",
+    "inCost": 6.5,
+    "out": "Skogmar",
+    "outCost": 5
+  },
+  {
+    "manager": "Manne",
+    "gw": 18,
+    "time": "2026-08-21T15:39:36.538135Z",
+    "in": "Abraham",
+    "inCost": 10.5,
+    "out": "Botheim",
+    "outCost": 9.9
+  },
+  {
+    "manager": "Oliver",
+    "gw": 18,
+    "time": "2026-08-16T16:37:08.797335Z",
+    "in": "Rosenquist",
+    "inCost": 5.5,
+    "out": "Ladefoged",
+    "outCost": 6.5
   }
 ]
