@@ -1654,5 +1654,77 @@
     "inCost": 5.5,
     "out": "Ladefoged",
     "outCost": 6.5
+  },
+  {
+    "manager": "Alle",
+    "gw": 19,
+    "time": "2026-08-29T11:05:10.378075Z",
+    "in": "Bergström",
+    "inCost": 6.2,
+    "out": "Larsson",
+    "outCost": 8.6
+  },
+  {
+    "manager": "Alle",
+    "gw": 19,
+    "time": "2026-08-29T11:05:10.372463Z",
+    "in": "Lind",
+    "inCost": 10.7,
+    "out": "Haksabanovic",
+    "outCost": 9.8
+  },
+  {
+    "manager": "Hellman",
+    "gw": 19,
+    "time": "2026-08-27T10:20:41.104553Z",
+    "in": "Helander",
+    "inCost": 5,
+    "out": "Miettinen",
+    "outCost": 5.4
+  },
+  {
+    "manager": "Josef",
+    "gw": 19,
+    "time": "2026-08-29T07:56:31.191377Z",
+    "in": "Bergström",
+    "inCost": 6.2,
+    "out": "Christoffersson",
+    "outCost": 6.1
+  },
+  {
+    "manager": "Josef",
+    "gw": 19,
+    "time": "2026-08-29T07:56:31.190831Z",
+    "in": "Castegren",
+    "inCost": 4.9,
+    "out": "Matthys",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Josef",
+    "gw": 19,
+    "time": "2026-08-29T07:56:31.185891Z",
+    "in": "Hult",
+    "inCost": 6,
+    "out": "Miettinen",
+    "outCost": 5.4
+  },
+  {
+    "manager": "Magnus",
+    "gw": 19,
+    "time": "2026-08-28T19:55:54.938109Z",
+    "in": "Kamara",
+    "inCost": 6.6,
+    "out": "Kenndal",
+    "outCost": 3.9
+  },
+  {
+    "manager": "Oliver",
+    "gw": 19,
+    "time": "2026-08-24T14:50:32.651908Z",
+    "in": "Kamara",
+    "inCost": 6.5,
+    "out": "Taonsa",
+    "outCost": 5.7
   }
 ]
