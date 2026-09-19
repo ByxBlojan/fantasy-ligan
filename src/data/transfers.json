@@ -2590,5 +2590,59 @@
     "inCost": 5.5,
     "out": "Pettersson",
     "outCost": 5.5
+  },
+  {
+    "manager": "Alle",
+    "gw": 22,
+    "time": "2026-09-19T12:41:25.085488Z",
+    "in": "Larsson",
+    "inCost": 8.8,
+    "out": "Bergström",
+    "outCost": 6.2
+  },
+  {
+    "manager": "Alle",
+    "gw": 22,
+    "time": "2026-09-19T12:41:25.077853Z",
+    "in": "Kouame",
+    "inCost": 5.9,
+    "out": "Sagoe Jr",
+    "outCost": 6.7
+  },
+  {
+    "manager": "Lindmark",
+    "gw": 22,
+    "time": "2026-09-19T12:23:03.781588Z",
+    "in": "Carlstrand",
+    "inCost": 7.4,
+    "out": "Lindgren",
+    "outCost": 8
+  },
+  {
+    "manager": "Manne",
+    "gw": 22,
+    "time": "2026-09-19T11:58:51.243140Z",
+    "in": "Bergström",
+    "inCost": 6.2,
+    "out": "Carlstrand",
+    "outCost": 7.3
+  },
+  {
+    "manager": "Manne",
+    "gw": 22,
+    "time": "2026-09-19T11:58:51.237096Z",
+    "in": "Hansen",
+    "inCost": 7.2,
+    "out": "Sagoe Jr",
+    "outCost": 6.4
+  },
+  {
+    "manager": "Oliver",
+    "gw": 22,
+    "time": "2026-09-18T17:19:54.894188Z",
+    "in": "Johansson",
+    "inCost": 5.7,
+    "out": "Thychosen",
+    "outCost": 5.9
   }
 ]
