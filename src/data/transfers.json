@@ -2734,5 +2734,122 @@
     "inCost": 5.7,
     "out": "Magnusson",
     "outCost": 5.2
+  },
+  {
+    "manager": "Alle",
+    "gw": 24,
+    "time": "2026-10-16T10:18:33.694628Z",
+    "in": "Lindgren",
+    "inCost": 8.2,
+    "out": "Carlstrand",
+    "outCost": 7.1
+  },
+  {
+    "manager": "Alle",
+    "gw": 24,
+    "time": "2026-10-16T10:18:33.694436Z",
+    "in": "Östman",
+    "inCost": 6,
+    "out": "Larsson",
+    "outCost": 8.8
+  },
+  {
+    "manager": "Alle",
+    "gw": 24,
+    "time": "2026-10-16T10:18:33.694228Z",
+    "in": "Lindberg",
+    "inCost": 8.6,
+    "out": "Kouame",
+    "outCost": 5.9
+  },
+  {
+    "manager": "Alle",
+    "gw": 24,
+    "time": "2026-10-16T10:18:33.692154Z",
+    "in": "J. Karlsson",
+    "inCost": 4.8,
+    "out": "Tenho",
+    "outCost": 5.8
+  },
+  {
+    "manager": "Erik",
+    "gw": 24,
+    "time": "2026-10-16T16:03:05.090271Z",
+    "in": "Lien",
+    "inCost": 10.2,
+    "out": "Carlstrand",
+    "outCost": 7.3
+  },
+  {
+    "manager": "Erik",
+    "gw": 24,
+    "time": "2026-10-16T16:03:05.087051Z",
+    "in": "Tagesson",
+    "inCost": 3.9,
+    "out": "Jensen",
+    "outCost": 6.1
+  },
+  {
+    "manager": "Josef",
+    "gw": 24,
+    "time": "2026-10-16T15:05:12.260994Z",
+    "in": "Svanbäck",
+    "inCost": 7.9,
+    "out": "Nnamani",
+    "outCost": 4.2
+  },
+  {
+    "manager": "Josef",
+    "gw": 24,
+    "time": "2026-10-16T15:05:12.260802Z",
+    "in": "W. Andersson",
+    "inCost": 3.8,
+    "out": "Sagoe Jr",
+    "outCost": 6.6
+  },
+  {
+    "manager": "Josef",
+    "gw": 24,
+    "time": "2026-10-16T15:05:12.260642Z",
+    "in": "Johansson",
+    "inCost": 5.7,
+    "out": "Matthys",
+    "outCost": 5.4
+  },
+  {
+    "manager": "Josef",
+    "gw": 24,
+    "time": "2026-10-16T15:05:12.258698Z",
+    "in": "Krasniqi",
+    "inCost": 5.4,
+    "out": "Pettersson",
+    "outCost": 5.5
+  },
+  {
+    "manager": "Lindmark",
+    "gw": 24,
+    "time": "2026-10-16T16:28:04.962098Z",
+    "in": "Gefvert",
+    "inCost": 5.1,
+    "out": "Hult",
+    "outCost": 6
+  },
+  {
+    "manager": "Manne",
+    "gw": 24,
+    "time": "2026-10-16T16:11:57.076969Z",
+    "in": "Taonsa",
+    "inCost": 5.8,
+    "out": "Hansen",
+    "outCost": 7.2
+  },
+  {
+    "manager": "Oliver",
+    "gw": 24,
+    "time": "2026-10-16T07:17:11.757699Z",
+    "in": "Helander",
+    "inCost": 5.2,
+    "out": "Castegren",
+    "outCost": 4.9
   }
 ]
