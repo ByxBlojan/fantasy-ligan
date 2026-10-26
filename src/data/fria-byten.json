@@ -5,19 +5,19 @@
   },
   {
     "manager": "Alle",
-    "fria": 0
-  },
-  {
-    "manager": "Josef",
     "fria": 1
   },
   {
+    "manager": "Josef",
+    "fria": 2
+  },
+  {
     "manager": "Magnus",
-    "fria": 3
+    "fria": 2
   },
   {
     "manager": "Erik",
-    "fria": 2
+    "fria": 3
   },
   {
     "manager": "Hellman",
@@ -25,7 +25,7 @@
   },
   {
     "manager": "Manne",
-    "fria": 4
+    "fria": 3
   },
   {
     "manager": "Lindmark",
